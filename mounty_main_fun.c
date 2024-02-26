@@ -17,9 +17,6 @@ void push(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
-
-
 }
 
 /**
@@ -51,4 +48,26 @@ void pint(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+}
+
+/**
+ * pop - pops element from stack
+ * @stack: the stack
+ * @line_number: line of command
+ */
+void pop(stack_t **stack, unsigned int line_number)
+{
+	if (stack)
+	{
+		delete_dnodeint_at_index(stack, 0);
+		parser->success = 1;
+	}
+	else
+	{
+		parser->success = 0;
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+
 }

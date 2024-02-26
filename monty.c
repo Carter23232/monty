@@ -12,7 +12,8 @@ int main(int argc, char **argv)
 	stack_t *stk = NULL;
 	prompt_t cmd[] =  { PROMPT_INIT };
 	FILE *monty_file;
-	instruction_t spc[] = {{"push", push}, {"pall", pall}, {"pint", pint}};
+	instruction_t spc[] = {{"push", push}, {"pall", pall}, {"pint", pint},
+	{"pop", pop}};
 	size_t i = 0, spc_len = sizeof(spc) / sizeof(spc[0]);
 
 	initializer();
