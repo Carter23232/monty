@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	while ((int)getline(&cmd->line, &cmd->len, monty_file) != -1)
 	{
 		token(&cmd->tokened, removeSpacesFromStr(cmd->line), ' ');
-		while (i < sizeof(spc) && cmd->iscmd == 0)
+		while (i < sizeof(spc)/ sizeof(spc[0]) && cmd->iscmd == 0)
 		{
 			if (_strcmp(cmd->tokened[0], spc[i].opcode) == 0)
 			{
