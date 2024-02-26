@@ -12,3 +12,10 @@
 29	56	1708903482566186467	CMakeFiles/monty.dir/monty_fun0.c.o	f0ba5340f0ac49bd
 28	48	1708976198895340736	monty	75c9841b933abe87
 2	49	1708946598810725937	CMakeFiles/monty.dir/monty_dep1(linked_list_func).c.o	a35a367c655a7175
+1	39	1708980734263167007	CMakeFiles/monty.dir/monty_dep1_list.c.o	b70d0392bc2a6eae
+0	49	1708980734279166573	CMakeFiles/monty.dir/monty.c.o	f68d26c56c969229
+1	67	1708980734291166247	CMakeFiles/monty.dir/monty_dep2_list.c.o	373e49b7e1fc988f
+3	74	1708980734303165922	CMakeFiles/monty.dir/monty_dep4_std_fun.c.o	57d9754793a620a2
+44	86	1708980734315165596	CMakeFiles/monty.dir/mounty_main_fun.c.o	c8d7409fc1f7ddd8
+50	89	1708980734319165488	CMakeFiles/monty.dir/monty_dep3_std_fun.c.o	4ba262fc71710990
+89	119	1708980734347164728	monty	b5b1477ffdce25eb
