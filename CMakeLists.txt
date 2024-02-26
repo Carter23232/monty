@@ -14,4 +14,5 @@ add_executable(monty
         mounty_main_fun.c
         "monty_dep3_std_fun.c"
         monty_dep3_list.c
+        mounty_main_fun2.c
 )

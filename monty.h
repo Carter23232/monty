@@ -63,6 +63,7 @@ void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
 /**DEPENDENCIES*/
 /**list**/
 stack_t *add_dnodeint(stack_t **head, const int n);
@@ -76,6 +77,7 @@ void _swapp(stack_t **h);
 int add_(stack_t **h);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
 void free_stack(stack_t *head);
+
 
 /**std_util**/
 char **token(char ***sorted_array, char *buffer, char key);
