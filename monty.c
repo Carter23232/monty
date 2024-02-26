@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	{
 		if (!trailing_space(cmd->cont_per_line))
 		{
-			token(&cmd->tokened, removeSpacesFromStr(cmd->cont_per_line), ' ');
+			token(&cmd->tokened, removeNewlineFromStr(cmd->cont_per_line), ' ');
 			while (i < spc_len && parser->success == 0)
 			{
 				if (_strcmp(spc[i].opcode, cmd->tokened[0]) == 0)

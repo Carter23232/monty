@@ -78,4 +78,5 @@ size_t print_stk(const stack_t *h);
 int _strcmp(char *s1, char *s2);
 void free_stack(stack_t *head);
 int trailing_space(char *str);
+char *removeNewlineFromStr(char *string);
 #endif
