@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 			token(&cmd->tokened, removeSpacesFromStr(cmd->cont_per_line), ' ');
 			while (i < spc_len && parser->success == 0)
 			{
-				if (_strcmp(cmd->tokened[0], spc[i].opcode) == 0)
+				if (_strcmp(spc[i].opcode, cmd->tokened[0]) == 0)
 				{
 					parser->str = &cmd->tokened[1];
 					spc[i].f(&stk, cmd->line_no);
@@ -43,14 +43,13 @@ int main(int argc, char **argv)
 			}
 			if (i == spc_len && !parser->success)
 			{
-				fprintf(stderr, "L%d: unknown instruction <opcode>", cmd->line_no);
+				fprintf(stderr, "L%d:unknown instruction %s", cmd->line_no, cmd->tokened[0]);
 				exit(EXIT_FAILURE);
 			}
 			(*cmd->cont_per_line)++, cmd->line_no++, parser->success = 0, free_str_arr(cmd->tokened);
 		}
 		else
-			(*cmd->cont_per_line)++, cmd->line_no++, parser->success = 0;
-
+			(*cmd->cont_per_line)++, cmd->line_no++;
 	}
 	fclose(monty_file), free(cmd->cont_per_line), free_stack(stk);
 	return (0);
