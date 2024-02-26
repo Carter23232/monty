@@ -40,7 +40,15 @@ void pall(stack_t **stack, unsigned int line_number)
  */
 void pint(stack_t **stack, unsigned int line_number)
 {
-	(void)line_number;
-	print_top(*stack);
-	parser->success = 1;
+	if (*stack)
+	{
+		print_top(*stack);
+		parser->success = 1;
+	}
+	else
+	{
+		parser->success = 0;
+		fprintf(stderr, "L%d : can't pint, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 }
