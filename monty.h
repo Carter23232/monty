@@ -58,24 +58,29 @@ typedef struct parser_s
 extern parser_t parser[];
 /**MAIN_FUNCTIONS**/
 void push(stack_t **stack, unsigned int line_number);
-void print_stack(stack_t **stack, unsigned int line_number);
-int read_and_cp_file(char *file, prompt_t cmd[]);
+void pall(stack_t **stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
+
 /**DEPENDENCIES*/
-stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n);
-stack_t *add_anypos(stack_t **head, unsigned int idx, const int n);
+/**list**/
+stack_t *add_dnodeint(stack_t **head, const int n);
+size_t print_stk(const stack_t *h);
+size_t print_top(const stack_t *h);
 size_t dlen(const stack_t *h);
+stack_t *add_anypos(stack_t **head, unsigned int idx, const int n);
+stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 size_t dlistint_len(const stack_t *h);
-stack_t *add_dnodeint(stack_t **head, const int n);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
-int _strlen(const char *s);
-char *removeSpacesFromStr(char *string);
-void free_str_arr(char **arr);
-char *_strcpy(char *dest, const char *src);
-char **token(char ***sorted_array, char *buffer, char key);
-size_t print_stk(const stack_t *h);
-int _strcmp(char *s1, char *s2);
 void free_stack(stack_t *head);
+
+/**std_util**/
+char **token(char ***sorted_array, char *buffer, char key);
+char *_strcpy(char *dest, const char *src);
+void free_str_arr(char **arr);
+char *removeSpacesFromStr(char *string);
+int _strlen(const char *s);
+int _strcmp(char *s1, char *s2);
 int trailing_space(char *str);
 char *removeNewlineFromStr(char *string);
 int _atoi(const char *str);

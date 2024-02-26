@@ -23,13 +23,24 @@ void push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * print_stack - prints stack
+ * pall - prints stack
  * @stack: the stack
  * @line_number: line of command
  */
-void print_stack(stack_t **stack, unsigned int line_number)
+void pall(stack_t **stack, unsigned int line_number)
 {
 	(void)line_number;
 	print_stk(*stack);
+	parser->success = 1;
+}
+/**
+ * pint - prints stack
+ * @stack: the stack
+ * @line_number: line of command
+ */
+void pint(stack_t **stack, unsigned int line_number)
+{
+	(void)line_number;
+	print_top(*stack);
 	parser->success = 1;
 }

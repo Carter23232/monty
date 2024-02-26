@@ -70,3 +70,16 @@ void free_stack(stack_t *head)
 		free(cur);
 	}
 }
+
+/**
+ * print_top - print doubly linked list
+ * @h: head of list
+ * Return: 0 if none or len
+ */
+size_t print_top(const stack_t *h)
+{
+	if (!h)
+		return (0);
+	printf("%d\n", h->n);
+	return (1);
+}
