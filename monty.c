@@ -38,6 +38,8 @@ int main(int argc, char **argv)
 					cmd->value = atoi(cmd->tokened[1]);
 					if (cmd->value)
 						number = cmd->value;
+					else
+						number = 0;
 				}
 				spc[i].f(&stk, cmd->line_no);
 				cmd->iscmd = 1;
