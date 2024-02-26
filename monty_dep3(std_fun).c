@@ -1,8 +1,8 @@
 #include "monty.h"
 /**
  * copy_file - copy content of file
- * @info: input cmd
- * @env: reference to environmental variables
+ * @file: input cmd
+ * @file_content: reference to environmental variables
  */
 
 void copy_file(const char** file, char **file_content)

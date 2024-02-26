@@ -14,7 +14,7 @@ void push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * print - prints  stack
+ * print_stack - prints stack
  * @stack: the stack
  * @line_number: line of command
  */
