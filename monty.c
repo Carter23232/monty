@@ -28,18 +28,14 @@ int main(int argc, char **argv)
 	}
 	while ((int)getline(&(cmd->line), &cmd->len, monty_file) != -1)
 	{
-		token(&cmd->tokened, removeSpacesFromStr(cmd->line), ' ');
+		token(&cmd->tokened, cmd->line, ' ');
 		while (i < sizeof(spc)/ sizeof(spc[0]) && cmd->iscmd == 0)
 		{
 			if (_strcmp(cmd->tokened[0], spc[i].opcode) == 0)
 			{
 				if (cmd->tokened[1])
 				{
-					cmd->value = atoi(cmd->tokened[1]);
-					if (cmd->value)
-						number = cmd->value;
-					else
-						number = 1;
+					number = atoi(cmd->tokened[1]);
 				}
 				spc[i].f(&stk, cmd->line_no);
 				cmd->iscmd = 1;
