@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 					if (cmd->value)
 						number = cmd->value;
 					else
-						number = 0;
+						number = 1;
 				}
 				spc[i].f(&stk, cmd->line_no);
 				cmd->iscmd = 1;
