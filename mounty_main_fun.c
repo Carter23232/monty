@@ -6,14 +6,19 @@
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	if (*parser->str == NULL)
+	parser->value = _atoi(*parser->str);
+	if (parser->is_converted)
+	{
+		add_dnodeint(stack, parser->value);
+		parser->success = 1;
+	}
+	else
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	parser->value = atoi(*parser->str);
-	add_dnodeint(stack, parser->value);
-	parser->success = 1;
+
+
 
 }
 

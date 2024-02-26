@@ -51,10 +51,11 @@ typedef struct parser_s
 {
 	int success;
 	int value;
+	int is_converted;
 	char **str;
 }parser_t;
 #define PASER_INIT \
-{0,0, NULL}
+{0,0,0, NULL}
 extern parser_t parser[];
 /**MAIN_FUNCTIONS**/
 void push(stack_t **stack, unsigned int line_number);
@@ -79,4 +80,5 @@ int _strcmp(char *s1, char *s2);
 void free_stack(stack_t *head);
 int trailing_space(char *str);
 char *removeNewlineFromStr(char *string);
+int _atoi(const char *str);
 #endif

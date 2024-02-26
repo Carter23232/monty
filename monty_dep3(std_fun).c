@@ -95,3 +95,48 @@ int _strcmp(char *s1, char *s2)
 		return (-1);
 	return (0);
 }
+
+
+/**
+ * _atoi - Convert a string to an integer.
+ * @info: input command
+ * @argv: argument variable
+ * Return: A integer
+ */
+int _atoi(const char *str)
+{
+	int index = 0, no = 0, min = 1, mx = 0, len = _strlen(str);
+
+	if (str == NULL)
+	{
+		parser->is_converted = 0;
+		return (0);
+	}
+
+	while (str[index])
+	{
+		if (str[index] == 45)
+		{
+			min *= -1;
+		}
+
+		while (str[index] >= 48 && str[index] <= 57)
+		{
+			mx = 1;
+			no = (no * 10) + (str[index] - '0');
+			index++;
+		}
+
+		if (mx == 1)
+			break;
+		index++;
+	}
+	no *= min;
+	if (index == len - 1)
+	{
+		parser->is_converted = 0;
+		return (0);
+	}
+	parser->is_converted = 1;
+	return (no);
+}
