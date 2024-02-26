@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while ((int)getline(&cmd->line, &cmd->len, monty_file) != -1)
+	while ((int)getline(&(cmd->line), &cmd->len, monty_file) != -1)
 	{
 		token(&cmd->tokened, removeSpacesFromStr(cmd->line), ' ');
 		while (i < sizeof(spc)/ sizeof(spc[0]) && cmd->iscmd == 0)
