@@ -35,3 +35,7 @@
 54	93	1708984235221993408	CMakeFiles/monty.dir/mounty_main_fun.c.o	c8d7409fc1f7ddd8
 65	104	1708984235233993246	CMakeFiles/monty.dir/monty_dep3_std_fun.c.o	4ba262fc71710990
 104	136	1708984235257992922	monty	b5b1477ffdce25eb
+0	36	1708984400895780795	CMakeFiles/monty.dir/mounty_main_fun.c.o	c8d7409fc1f7ddd8
+36	57	1708984400919780478	monty	b5b1477ffdce25eb
+0	37	1708984430042509015	CMakeFiles/monty.dir/mounty_main_fun.c.o	c8d7409fc1f7ddd8
+37	74	1708984430078507347	monty	b5b1477ffdce25eb

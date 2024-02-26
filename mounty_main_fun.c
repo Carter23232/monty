@@ -57,7 +57,7 @@ void pint(stack_t **stack, unsigned int line_number)
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	if (stack)
+	if (*stack)
 	{
 		delete_dnodeint_at_index(stack, 0);
 		parser->success = 1;
