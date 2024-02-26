@@ -72,7 +72,7 @@ void free_stack(stack_t *head)
 }
 
 /**
- * print_top - print doubly linked list
+ * print_top - print element in doubly linked list
  * @h: head of list
  * Return: 0 if none or len
  */
@@ -82,4 +82,16 @@ size_t print_top(const stack_t *h)
 		return (0);
 	printf("%d\n", h->n);
 	return (1);
+}
+
+/**
+ * _swapp - swaps first 2 element
+ * @h: head of list
+ * Return: 0 if none or 1
+ */
+void _swapp(stack_t **h)
+{
+	 int temp = (*h)->n;
+	(*h)->n = (*h)->next->n;
+	(*h)->next->n = temp;
 }

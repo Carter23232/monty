@@ -61,7 +61,7 @@ void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
-
+void _swap(stack_t **stack, unsigned int line_number);
 /**DEPENDENCIES*/
 /**list**/
 stack_t *add_dnodeint(stack_t **head, const int n);
@@ -71,7 +71,8 @@ size_t dlen(const stack_t *h);
 stack_t *add_anypos(stack_t **head, unsigned int idx, const int n);
 stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
-size_t dlistint_len(const stack_t *h);
+void _swapp(stack_t **h);
+
 stack_t *add_dnodeint_end(stack_t **head, const int n);
 void free_stack(stack_t *head);
 

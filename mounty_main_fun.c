@@ -71,3 +71,23 @@ void pop(stack_t **stack, unsigned int line_number)
 
 
 }
+/**
+ * _swap - swaps first 2 element
+ * @stack: the stack
+ * @line_number: line of command
+ */
+void _swap(stack_t **stack, unsigned int line_number)
+{
+	if (*stack && dlen(*stack) >= 2)
+	{
+		_swapp(stack);
+		parser->success = 1;
+	}
+	else
+	{
+		parser->success = 0;
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+}
