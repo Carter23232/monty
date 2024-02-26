@@ -80,6 +80,7 @@ size_t print_top(const stack_t *h)
 {
 	if (!h)
 		return (0);
-	printf("%d\n", h->n);
+	else
+		printf("%d\n", h->n);
 	return (1);
 }
