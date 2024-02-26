@@ -19,6 +19,7 @@ stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n)
 		return (add_dnodeint_end(h, n));
 	return (add_anypos(h, idx, n));
 }
+
 /**
  * add_anypos -  insert node at a given index of doubly linked list
  * @head: head of list
@@ -26,7 +27,6 @@ stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n)
  * @n:number
  * Return: address of the new node, or NULL
  */
-
 stack_t *add_anypos(stack_t **head, unsigned int idx, const int n)
 {
 	stack_t *n_data, *cur = *head, *temp;
@@ -54,6 +54,7 @@ stack_t *add_anypos(stack_t **head, unsigned int idx, const int n)
 	}
 	return (n_data);
 }
+
 /**
  * dlen - doubly linked list len
  * @h: head of list

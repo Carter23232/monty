@@ -1,11 +1,12 @@
 #include "monty.h"
+void initializer(void);
+parser_t parser[1];
 /**
  * main - entry int to program
  * @argc : argument counter
  * @argv : array of arguments
  * Return: 0 on success
  */
-parser_t parser[] = {PASER_INIT};
 int main(int argc, char **argv)
 {
 	stack_t *stk = NULL;
@@ -14,7 +15,7 @@ int main(int argc, char **argv)
 	instruction_t spc[] = {{"push", push}, {"pall", print_stack}};
 	size_t i = 0, spc_len = sizeof(spc) / sizeof(spc[0]);
 
-
+	initializer();
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -30,7 +31,7 @@ int main(int argc, char **argv)
 	{
 		if (!trailing_space(cmd->cont_per_line))
 		{
-			token(&cmd->tokened, removeNewlineFromStr(cmd->cont_per_line), ' ');
+			token(&cmd->tokened, cmd->cont_per_line, ' ');
 			while (i < spc_len && parser->success == 0)
 			{
 				if (_strcmp(spc[i].opcode, cmd->tokened[0]) == 0)
@@ -43,14 +44,26 @@ int main(int argc, char **argv)
 			}
 			if (i == spc_len && !parser->success)
 			{
-				fprintf(stderr, "L%d: unknown instruction %s\n", cmd->line_no, cmd->tokened[0]);
+				fprintf(stderr, "L%d: unknown instruction %s\n",
+					cmd->line_no, cmd->tokened[0]);
 				exit(EXIT_FAILURE);
 			}
-			(*cmd->cont_per_line)++, cmd->line_no++, parser->success = 0, free_str_arr(cmd->tokened), i = 0;
+			(*cmd->cont_per_line)++, cmd->line_no++, parser->success
+			= 0, free_str_arr(cmd->tokened), i = 0;
 		}
 		else
 			(*cmd->cont_per_line)++, cmd->line_no++;
 	}
 	fclose(monty_file), free(cmd->cont_per_line), free_stack(stk);
 	return (0);
+}
+/**
+ * initializer - initialise extern parser
+ */
+void initializer(void)
+{
+	parser->success = 0;
+	parser->value = 0;
+	parser->is_converted = 0;
+	parser->str = NULL;
 }

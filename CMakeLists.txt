@@ -8,9 +8,9 @@ include_directories(.)
 add_executable(monty
         monty.c
         monty.h
-        "monty_dep2(linked_list_func).c"
-        "monty_dep1(linked_list_func).c"
-        "monty_dep4(std_fun).c"
+        "monty_dep2_list.c"
+        "monty_dep1_list.c"
+        "monty_dep4_std_fun.c"
         mounty_main_fun.c
-        "monty_dep3(std_fun).c"
+        "monty_dep3_std_fun.c"
 )

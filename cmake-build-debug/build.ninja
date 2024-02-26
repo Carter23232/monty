@@ -56,22 +56,22 @@ build CMakeFiles/monty.dir/monty.c.o: C_COMPILER__monty_unscanned_Debug /home/ga
   OBJECT_DIR = CMakeFiles/monty.dir
   OBJECT_FILE_DIR = CMakeFiles/monty.dir
 
-build CMakeFiles/monty.dir/monty_dep2(linked_list_func).c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_dep2(linked_list_func).c || cmake_object_order_depends_target_monty
-  DEP_FILE = "CMakeFiles/monty.dir/monty_dep2(linked_list_func).c.o.d"
+build CMakeFiles/monty.dir/monty_dep2_list.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_dep2_list.c || cmake_object_order_depends_target_monty
+  DEP_FILE = CMakeFiles/monty.dir/monty_dep2_list.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -I/home/gadget/Desktop/ALX/monty/.
   OBJECT_DIR = CMakeFiles/monty.dir
   OBJECT_FILE_DIR = CMakeFiles/monty.dir
 
-build CMakeFiles/monty.dir/monty_dep1(linked_list_func).c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_dep1(linked_list_func).c || cmake_object_order_depends_target_monty
-  DEP_FILE = "CMakeFiles/monty.dir/monty_dep1(linked_list_func).c.o.d"
+build CMakeFiles/monty.dir/monty_dep1_list.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_dep1_list.c || cmake_object_order_depends_target_monty
+  DEP_FILE = CMakeFiles/monty.dir/monty_dep1_list.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -I/home/gadget/Desktop/ALX/monty/.
   OBJECT_DIR = CMakeFiles/monty.dir
   OBJECT_FILE_DIR = CMakeFiles/monty.dir
 
-build CMakeFiles/monty.dir/monty_dep4(std_fun).c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_dep4(std_fun).c || cmake_object_order_depends_target_monty
-  DEP_FILE = "CMakeFiles/monty.dir/monty_dep4(std_fun).c.o.d"
+build CMakeFiles/monty.dir/monty_dep4_std_fun.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_dep4_std_fun.c || cmake_object_order_depends_target_monty
+  DEP_FILE = CMakeFiles/monty.dir/monty_dep4_std_fun.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -I/home/gadget/Desktop/ALX/monty/.
   OBJECT_DIR = CMakeFiles/monty.dir
@@ -84,8 +84,8 @@ build CMakeFiles/monty.dir/mounty_main_fun.c.o: C_COMPILER__monty_unscanned_Debu
   OBJECT_DIR = CMakeFiles/monty.dir
   OBJECT_FILE_DIR = CMakeFiles/monty.dir
 
-build CMakeFiles/monty.dir/monty_dep3(std_fun).c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_dep3(std_fun).c || cmake_object_order_depends_target_monty
-  DEP_FILE = "CMakeFiles/monty.dir/monty_dep3(std_fun).c.o.d"
+build CMakeFiles/monty.dir/monty_dep3_std_fun.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_dep3_std_fun.c || cmake_object_order_depends_target_monty
+  DEP_FILE = CMakeFiles/monty.dir/monty_dep3_std_fun.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -I/home/gadget/Desktop/ALX/monty/.
   OBJECT_DIR = CMakeFiles/monty.dir
@@ -99,7 +99,7 @@ build CMakeFiles/monty.dir/monty_dep3(std_fun).c.o: C_COMPILER__monty_unscanned_
 #############################################
 # Link the executable monty
 
-build monty: C_EXECUTABLE_LINKER__monty_Debug CMakeFiles/monty.dir/monty.c.o CMakeFiles/monty.dir/monty_dep2(linked_list_func).c.o CMakeFiles/monty.dir/monty_dep1(linked_list_func).c.o CMakeFiles/monty.dir/monty_dep4(std_fun).c.o CMakeFiles/monty.dir/mounty_main_fun.c.o CMakeFiles/monty.dir/monty_dep3(std_fun).c.o
+build monty: C_EXECUTABLE_LINKER__monty_Debug CMakeFiles/monty.dir/monty.c.o CMakeFiles/monty.dir/monty_dep2_list.c.o CMakeFiles/monty.dir/monty_dep1_list.c.o CMakeFiles/monty.dir/monty_dep4_std_fun.c.o CMakeFiles/monty.dir/mounty_main_fun.c.o CMakeFiles/monty.dir/monty_dep3_std_fun.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/monty.dir
   POST_BUILD = :

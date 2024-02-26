@@ -54,8 +54,7 @@ typedef struct parser_s
 	int is_converted;
 	char **str;
 }parser_t;
-#define PASER_INIT \
-{0,0,0, NULL}
+
 extern parser_t parser[];
 /**MAIN_FUNCTIONS**/
 void push(stack_t **stack, unsigned int line_number);
@@ -73,7 +72,6 @@ int _strlen(const char *s);
 char *removeSpacesFromStr(char *string);
 void free_str_arr(char **arr);
 char *_strcpy(char *dest, const char *src);
-void copy_file(const char **file, char **file_content);
 char **token(char ***sorted_array, char *buffer, char key);
 size_t print_stk(const stack_t *h);
 int _strcmp(char *s1, char *s2);

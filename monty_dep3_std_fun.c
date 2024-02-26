@@ -1,39 +1,9 @@
 #include "monty.h"
-/**
- * copy_file - copy content of file
- * @file: input cmd
- * @file_content: reference to environmental variables
- */
 
-void copy_file(const char** file, char **file_content)
-{
-	int num_element = 0, i = 0;
-
-	while (file[num_element] != NULL)
-		num_element++;
-
-	file_content = malloc(sizeof(char *) * (num_element + 1));
-
-	if (file_content == NULL)
-	{
-		free(file_content);
-		return;
-	}
-	while (file[i] != NULL)
-	{
-		file_content[i] = malloc(sizeof(char) * _strlen((char*)file[i]) + 1);
-		if (file_content[i] != NULL)
-			_strcpy(file_content[i], (char*)file[i]);
-		i++;
-	}
-	file_content[i] = NULL;
-}
 /**
  * free_str_arr - free memory of array of strings
  * @arr: the array
- *
  */
-
 void free_str_arr(char **arr)
 {
 	int i = 0;
@@ -48,25 +18,6 @@ void free_str_arr(char **arr)
 	}
 	free(arr);
 	arr = NULL;
-}
-
-/**
-* _strcpy - Copy a string
-* @dest: Destination value
-* @src: Source value
-*
-* Return: the pointer to dest
-*/
-char *_strcpy(char *dest, const char *src)
-{
-	int i;
-
-	for (i = 0; src[i] != '\0'; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = '\0';
-	return (dest);
 }
 
 /**
@@ -95,7 +46,6 @@ int _strcmp(char *s1, char *s2)
 		return (-1);
 	return (0);
 }
-
 
 /**
  * _atoi - Convert a string to an integer.
@@ -138,4 +88,57 @@ int _atoi(const char *str)
 	}
 	parser->is_converted = 1;
 	return (no);
+}
+
+/**
+ * removeNewlineFromStr - removes trailing spaces from string
+ * @string: input string
+ * Return: an edited string
+ */
+char *removeNewlineFromStr(char *string)
+{
+	size_t  len = _strlen(string), i = 0, j = 0;
+
+	removeSpacesFromStr(string);
+	for (i = 0 ; i < len; i++)
+	{
+		if (string[0] == '\n')
+		{
+			for (i = 0; i < (len - 1); i++)
+				string[i] = string[i + 1];
+			string[i] = '\0';
+			len--;
+			i = -1;
+			continue;
+		}
+		if (string[i] == '\n' && string[i + 1] == '\n')
+		{
+			for (j = i; j < (len - 1); j++)
+			{
+				string[j] = string[j + 1];
+			}
+			string[j] = '\0';
+			len--;
+			i--;
+		}
+		else if (string[i] == '\n' && string[i + 1] == '\0')
+			string[i] = '\0';
+	}
+	return (string);
+}
+
+/**
+ * _strlen - calculates the length of a string
+ * @s: the string to calculate the length of
+ * Return: the length of the string
+ */
+int _strlen(const char *s)
+{
+	int len = 0;
+
+	if (s == NULL)
+		return (len);
+	while (s[len] != '\0')
+		len++;
+	return (len);
 }

@@ -21,6 +21,7 @@ int get_num_of_words(char *buffer, char key)
 	}
 	return (n_of_words);
 }
+
 /**
  * len_per_word - calculates the number characters in a word
  * @str: input string
@@ -42,6 +43,7 @@ int len_per_word(const char *str, size_t pos, char key)
 	}
 	return (len);
 }
+
 /**
  * token - splits a string into tokens(array of words)
  * @sorted_array: variable to store tokenized array
@@ -55,6 +57,7 @@ char **token(char ***sorted_array, char *buffer, char key)
 	int index_array = 0, no_words = get_num_of_words(buffer, key);
 	size_t i, buf_len, sorted_index = 0, len;
 
+	removeNewlineFromStr(buffer);
 	if (buffer == NULL && *sorted_array != NULL)
 		return (NULL);
 	buf_len = _strlen(buffer);
@@ -69,7 +72,7 @@ char **token(char ***sorted_array, char *buffer, char key)
 		{
 			fprintf(stderr, "%s\n", mem_E_msg);
 			free_str_arr(*sorted_array);
-			return NULL;
+			return (NULL);
 		}
 		while ((buffer)[i] != key && (buffer)[i] != '\0')
 		{
@@ -85,21 +88,6 @@ char **token(char ***sorted_array, char *buffer, char key)
 	}
 	(*sorted_array)[no_words] = NULL;
 	return (*sorted_array);
-}
-/**
- * _strlen - calculates the length of a string
- * @s: the string to calculate the length of
- * Return: the length of the string
- */
-int _strlen(const char *s)
-{
-	int len = 0;
-
-	if (s == NULL)
-		return (len);
-	while (s[len] != '\0')
-		len++;
-	return (len);
 }
 
 /**
@@ -137,12 +125,12 @@ char *removeSpacesFromStr(char *string)
 	}
 	return (string);
 }
+
 /**
  * trailing_space - handle empty parameters
  * @str: input stream
  * Return: 1 if succeed and 0 otherwise
  */
-
 int trailing_space(char *str)
 {
 	size_t i = 0;
@@ -164,39 +152,3 @@ int trailing_space(char *str)
 	return (0);
 }
 
-/**
- * removeNewlineFromStr - removes trailing spaces from string
- * @string: input string
- * Return: an edited string
- */
-char *removeNewlineFromStr(char *string)
-{
-	size_t  len = _strlen(string), i = 0, j = 0;
-
-	removeSpacesFromStr(string);
-	for (i = 0 ; i < len; i++)
-	{
-		if (string[0] == '\n')
-		{
-			for (i = 0; i < (len - 1); i++)
-				string[i] = string[i + 1];
-			string[i] = '\0';
-			len--;
-			i = -1;
-			continue;
-		}
-		if (string[i] == '\n' && string[i + 1] == '\n')
-		{
-			for (j = i; j < (len - 1); j++)
-			{
-				string[j] = string[j + 1];
-			}
-			string[j] = '\0';
-			len--;
-			i--;
-		}
-		else if (string[i] == '\n' && string[i + 1] == '\0')
-			string[i] = '\0';
-	}
-	return (string);
-}
