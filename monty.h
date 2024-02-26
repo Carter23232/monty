@@ -38,17 +38,24 @@ typedef struct instruction_s
 
 typedef struct prompt_s
 {
-	char *line;
+	char *cont_per_line;
 	char **tokened;
 	unsigned  int line_no;
-	int iscmd, value;
 	size_t len;
 } prompt_t;
 
 #define PROMPT_INIT \
-{NULL, NULL, 0, 0, 0, 0}
+{NULL, NULL, 1, 0}
 
-extern int number;
+typedef struct parser_s
+{
+	int success;
+	int value;
+	char **str;
+}parser_t;
+#define PASER_INIT \
+{1,0, NULL}
+extern parser_t parser[];
 /**MAIN_FUNCTIONS**/
 void push(stack_t **stack, unsigned int line_number);
 void print_stack(stack_t **stack, unsigned int line_number);

@@ -5,15 +5,15 @@
  * @argv : array of arguments
  * Return: 0 on success
  */
-int number;
+parser_t parser[] = {PASER_INIT};
 int main(int argc, char **argv)
 {
-	size_t i = 0;
 	stack_t *stk = NULL;
 	prompt_t cmd[] =  { PROMPT_INIT };
 	FILE *monty_file;
-
 	instruction_t spc[] = {{"push", push}, {"pall", print_stack}};
+	size_t i = 0, spc_len = sizeof(spc) / sizeof(spc[0]);
+
 
 	if (argc != 2)
 	{
@@ -26,30 +26,26 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while ((int)getline(&(cmd->line), &cmd->len, monty_file) != -1)
+	while ((int)getline(&(cmd->cont_per_line), &cmd->len, monty_file) != -1)
 	{
-		token(&cmd->tokened, cmd->line, ' ');
-		while (i < sizeof(spc)/ sizeof(spc[0]) && cmd->iscmd == 0)
+		token(&cmd->tokened, removeSpacesFromStr(cmd->cont_per_line), ' ');
+		while (i < spc_len && parser->success == 0)
 		{
 			if (_strcmp(cmd->tokened[0], spc[i].opcode) == 0)
 			{
-				if (cmd->tokened[1])
-				{
-					number = atoi(cmd->tokened[1]);
-				}
+				parser->str = &cmd->tokened[0];
 				spc[i].f(&stk, cmd->line_no);
-				cmd->iscmd = 1;
 			}
 			else
 				i++;
 		}
-		if (i == sizeof(spc) && !cmd->iscmd)
+		if (i == spc_len && !parser->success)
 		{
-			fprintf(stderr, "L<%d>: unknown instruction <opcode>", cmd->line_no);
+			fprintf(stderr, "L%d: unknown instruction <opcode>", cmd->line_no);
 			exit(EXIT_FAILURE);
 		}
-		(*cmd->line)++, cmd->line_no++, cmd->iscmd = 0, free_str_arr(cmd->tokened);
+		(*cmd->cont_per_line)++, cmd->line_no++, free_str_arr(cmd->tokened), parser->success = 0;
 	}
-	fclose(monty_file), free(cmd->line), free_stack(stk);
+	fclose(monty_file), free(cmd->cont_per_line), free_stack(stk);
 	return (0);
 }

@@ -6,11 +6,15 @@
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	if (!add_dnodeint(stack, number))
+	if (*parser->str == NULL)
 	{
-		fprintf(stderr, "L<%d>: unknown instruction <opcode>", line_number);
+		fprintf(stderr, "L%d:usage:Push integer", line_number);
 		exit(EXIT_FAILURE);
 	}
+	parser->value = atoi(*parser->str);
+	add_dnodeint(stack, parser->value);
+	parser->success = 1;
+
 }
 
 /**
@@ -22,4 +26,5 @@ void print_stack(stack_t **stack, unsigned int line_number)
 {
 	(void)line_number;
 	print_stk(*stack);
+	parser->success = 1;
 }
