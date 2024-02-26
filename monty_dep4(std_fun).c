@@ -146,7 +146,7 @@ char *removeSpacesFromStr(char *string)
 int trailing_space(char *str)
 {
 	size_t i = 0;
-	size_t is_space = 0;
+	int is_space = 0;
 
 	if (str == NULL || _strlen(str) == 0)
 		return (1);
