@@ -1,0 +1,3 @@
+/home/gadget/Desktop/ALX/monty/cmake-build-debug/CMakeFiles/monty.dir
+/home/gadget/Desktop/ALX/monty/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gadget/Desktop/ALX/monty/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,25 @@
+# ninja log v5
+1	34	1708905429204005483	CMakeFiles/monty.dir/monty_dep2(linked_list_func).c.o	538ee9c37e4ddb72
+40	77	1708905429244004767	CMakeFiles/monty.dir/monty_dep3.c.o	85cb2f1c8da88a84
+1	29	1708903482538187187	CMakeFiles/monty.dir/monty_fun1.c.o	f55de857b45220e5
+1	37	1708903482546186981	CMakeFiles/monty.dir/monty_fun2.c.o	3576802cf1371442
+34	77	1708905429244004767	CMakeFiles/monty.dir/mounty_main_fun.c.o	c8d7409fc1f7ddd8
+1	33	1708903482542187084	CMakeFiles/monty.dir/monty_fun3.c.o	e13fab27773a1594
+4	42	1708905429208005411	CMakeFiles/monty.dir/monty_dep4.c.o	f4cbc359d8f5d827
+1	40	1708905429208005411	CMakeFiles/monty.dir/monty.c.o	f68d26c56c969229
+29	56	1708903482566186467	CMakeFiles/monty.dir/monty_fun0.c.o	f0ba5340f0ac49bd
+77	97	1708905429268004338	monty	645096bb46ae8082
+2	59	1708905429228005053	CMakeFiles/monty.dir/monty_dep1(linked_list_func).c.o	a35a367c655a7175
+4	46	1708906222643886546	CMakeFiles/monty.dir/mounty_main_fun.c.o	c8d7409fc1f7ddd8
+1	49	1708906222643886546	CMakeFiles/monty.dir/monty.c.o	f68d26c56c969229
+2	56	1708906222655886382	CMakeFiles/monty.dir/monty_dep4(std_fun).c.o	7077a2c34b3d10ec
+5	60	1708906222655886382	CMakeFiles/monty.dir/monty_dep3(std_fun).c.o	e82ef80dcf411253
+0	36	1708906252191482707	CMakeFiles/monty.dir/monty.c.o	f68d26c56c969229
+1	32	1708906265295304199	CMakeFiles/monty.dir/monty.c.o	f68d26c56c969229
+32	59	1708906265319303873	monty	75c9841b933abe87
+1	38	1708906526626572244	CMakeFiles/monty.dir/monty.c.o	f68d26c56c969229
+0	32	1708906567244767619	CMakeFiles/monty.dir/monty.c.o	f68d26c56c969229
+1	33	1708906567244767619	CMakeFiles/monty.dir/mounty_main_fun.c.o	c8d7409fc1f7ddd8
+1	45	1708906602327288733	CMakeFiles/monty.dir/monty.c.o	f68d26c56c969229
+2	59	1708906602343288075	CMakeFiles/monty.dir/mounty_main_fun.c.o	c8d7409fc1f7ddd8
+59	86	1708906602367287088	monty	75c9841b933abe87
