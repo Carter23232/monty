@@ -41,12 +41,12 @@ typedef struct prompt_s
 	char *line;
 	char **tokened;
 	unsigned  int line_no;
-	int iscmd;
+	int iscmd, value;
 	size_t len;
 } prompt_t;
 
 #define PROMPT_INIT \
-{NULL, NULL, 0, 0, 0}
+{NULL, NULL, 0, 0, 0, 0}
 
 extern int number;
 /**MAIN_FUNCTIONS**/

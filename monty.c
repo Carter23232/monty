@@ -34,7 +34,11 @@ int main(int argc, char **argv)
 			if (_strcmp(cmd->tokened[0], spc[i].opcode) == 0)
 			{
 				if (cmd->tokened[1])
-					number = atoi(cmd->tokened[1]);
+				{
+					cmd->value = atoi(cmd->tokened[1]);
+					if (cmd->value)
+						number = cmd->value;
+				}
 				spc[i].f(&stk, cmd->line_no);
 				cmd->iscmd = 1;
 			}
