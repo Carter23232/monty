@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 	monty_file = fopen(argv[1], "r");
 	if (!monty_file)
 	{
-		fprintf(stderr, "Error: Can't open file %s", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 	while ((int)getline(&cmd->line, &cmd->len, monty_file) != -1)
