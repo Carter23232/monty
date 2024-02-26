@@ -5,8 +5,7 @@
  * @argv : array of arguments
  * Return: 0 on success
  */
-int number;
-
+int number = 0;
 int main(int argc, char **argv)
 {
 	int i = 0;
