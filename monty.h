@@ -45,7 +45,7 @@ typedef struct prompt_s
 } prompt_t;
 
 #define PROMPT_INIT \
-{NULL, NULL, 1, 0}
+{NULL, NULL, 2, 0}
 
 typedef struct parser_s
 {
