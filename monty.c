@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 		{
 			if (_strcmp(cmd->tokened[0], spc[i].opcode) == 0)
 			{
-				parser->str = &cmd->tokened[0];
+				parser->str = &cmd->tokened[1];
 				spc[i].f(&stk, cmd->line_no);
 			}
 			else

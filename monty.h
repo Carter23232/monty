@@ -54,7 +54,7 @@ typedef struct parser_s
 	char **str;
 }parser_t;
 #define PASER_INIT \
-{1,0, NULL}
+{0,0, NULL}
 extern parser_t parser[];
 /**MAIN_FUNCTIONS**/
 void push(stack_t **stack, unsigned int line_number);
