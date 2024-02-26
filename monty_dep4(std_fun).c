@@ -137,3 +137,29 @@ char *removeSpacesFromStr(char *string)
 	}
 	return (string);
 }
+/**
+ * trailing_space - handle empty parameters
+ * @str: input stream
+ * Return: 1 if succeed and 0 otherwise
+ */
+
+int trailing_space(char *str)
+{
+	size_t i = 0;
+	size_t is_space = 0;
+
+	if (str == NULL || _strlen(str) == 0)
+		return (1);
+
+	while (str[i] != '\0')
+	{
+		if (str[i] == ' ' || str[i] == '\n')
+			is_space++;
+		if (str[i] == '\n' && str[i + 1] != '\0')
+			is_space++;
+		i++;
+	}
+	if (is_space == _strlen(str))
+		return (1);
+	return (0);
+}

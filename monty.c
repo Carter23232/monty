@@ -28,23 +28,29 @@ int main(int argc, char **argv)
 	}
 	while ((int)getline(&(cmd->cont_per_line), &cmd->len, monty_file) != -1)
 	{
-		token(&cmd->tokened, removeSpacesFromStr(cmd->cont_per_line), ' ');
-		while (i < spc_len && parser->success == 0)
+		if (!trailing_space(cmd->cont_per_line))
 		{
-			if (_strcmp(cmd->tokened[0], spc[i].opcode) == 0)
+			token(&cmd->tokened, removeSpacesFromStr(cmd->cont_per_line), ' ');
+			while (i < spc_len && parser->success == 0)
 			{
-				parser->str = &cmd->tokened[1];
-				spc[i].f(&stk, cmd->line_no);
+				if (_strcmp(cmd->tokened[0], spc[i].opcode) == 0)
+				{
+					parser->str = &cmd->tokened[1];
+					spc[i].f(&stk, cmd->line_no);
+				}
+				else
+					i++;
 			}
-			else
-				i++;
+			if (i == spc_len && !parser->success)
+			{
+				fprintf(stderr, "L%d: unknown instruction <opcode>", cmd->line_no);
+				exit(EXIT_FAILURE);
+			}
+			(*cmd->cont_per_line)++, cmd->line_no++, parser->success = 0, free_str_arr(cmd->tokened);
 		}
-		if (i == spc_len && !parser->success)
-		{
-			fprintf(stderr, "L%d: unknown instruction <opcode>", cmd->line_no);
-			exit(EXIT_FAILURE);
-		}
-		(*cmd->cont_per_line)++, cmd->line_no++, free_str_arr(cmd->tokened), parser->success = 0;
+		else
+			(*cmd->cont_per_line)++, cmd->line_no++, parser->success = 0;
+
 	}
 	fclose(monty_file), free(cmd->cont_per_line), free_stack(stk);
 	return (0);

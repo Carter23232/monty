@@ -45,7 +45,7 @@ typedef struct prompt_s
 } prompt_t;
 
 #define PROMPT_INIT \
-{NULL, NULL, 2, 0}
+{NULL, NULL, 1, 0}
 
 typedef struct parser_s
 {
@@ -77,4 +77,5 @@ char **token(char ***sorted_array, char *buffer, char key);
 size_t print_stk(const stack_t *h);
 int _strcmp(char *s1, char *s2);
 void free_stack(stack_t *head);
+int trailing_space(char *str);
 #endif
