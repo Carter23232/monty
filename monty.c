@@ -5,10 +5,10 @@
  * @argv : array of arguments
  * Return: 0 on success
  */
-int number = 0;
+int number;
 int main(int argc, char **argv)
 {
-	int i = 0;
+	size_t i = 0;
 	stack_t *stk = NULL;
 	prompt_t cmd[] =  { PROMPT_INIT };
 	FILE *monty_file;
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (getline(&cmd->line, &cmd->len, monty_file) != -1)
+	while ((int)getline(&cmd->line, &cmd->len, monty_file) != -1)
 	{
 		token(&cmd->tokened, removeSpacesFromStr(cmd->line), ' ');
 		while (i < sizeof(spc) && cmd->iscmd == 0)
