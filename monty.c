@@ -1,5 +1,5 @@
 #include "monty.h"
-void initializer(instruction_t  spc[]);
+void initializer(void);
 parser_t parser[1];
 /**
  * main - entry int to program
@@ -12,10 +12,10 @@ int main(int argc, char **argv)
 	stack_t *stk = NULL;
 	prompt_t cmd[] =  { PROMPT_INIT };
 	FILE *monty_file;
-	size_t i = 0, spc_len = 2;
-	instruction_t spc[spc_len];
+	instruction_t spc[] = {{"push", push}, {"pall", print_stack}};
+	size_t i = 0, spc_len = sizeof(spc) / sizeof(spc[0]);
 
-	initializer(spc);
+	initializer();
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -59,14 +59,11 @@ int main(int argc, char **argv)
 }
 /**
  * initializer - initialise extern parser
- * @spc: specifier array
  */
-void initializer(instruction_t  spc[])
+void initializer(void)
 {
 	parser->success = 0;
 	parser->value = 0;
 	parser->is_converted = 0;
 	parser->str = NULL;
-	spc[0] = (instruction_t){"push", push};
-	spc[1] = (instruction_t){"pall", print_stack};
 }
