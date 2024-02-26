@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 			}
 			if (i == spc_len && !parser->success)
 			{
-				fprintf(stderr, "L%d:unknown instruction %s", cmd->line_no, cmd->tokened[0]);
+				fprintf(stderr, "L%d:unknown instruction %s\n", cmd->line_no, cmd->tokened[0]);
 				exit(EXIT_FAILURE);
 			}
 			(*cmd->cont_per_line)++, cmd->line_no++, parser->success = 0, free_str_arr(cmd->tokened);

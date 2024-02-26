@@ -8,7 +8,7 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	if (*parser->str == NULL)
 	{
-		fprintf(stderr, "L%d:usage:Push integer", line_number);
+		fprintf(stderr, "L%d:usage:Push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	parser->value = atoi(*parser->str);
