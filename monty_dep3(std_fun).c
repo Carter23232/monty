@@ -99,8 +99,7 @@ int _strcmp(char *s1, char *s2)
 
 /**
  * _atoi - Convert a string to an integer.
- * @info: input command
- * @argv: argument variable
+ * @str: input command
  * Return: A integer
  */
 int _atoi(const char *str)
