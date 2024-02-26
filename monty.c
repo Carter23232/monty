@@ -48,9 +48,6 @@ int main(int argc, char **argv)
 		}
 		(*cmd->line)++, cmd->line_no++, cmd->iscmd = 0, free_str_arr(cmd->tokened);
 	}
-	fclose(monty_file);
-	free(cmd->line);
-	free_stack(stk);
+	fclose(monty_file), free(cmd->line), free_stack(stk);
 	return (0);
 }
-

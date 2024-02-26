@@ -139,7 +139,3 @@ size_t print_stk(const stack_t *h)
 	}
 	return (len);
 }
-
-
-
-

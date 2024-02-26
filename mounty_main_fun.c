@@ -23,4 +23,3 @@ void print_stack(stack_t **stack, unsigned int line_number)
 	(void)line_number;
 	print_stk(*stack);
 }
-

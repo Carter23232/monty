@@ -137,5 +137,3 @@ char *removeSpacesFromStr(char *string)
 	}
 	return (string);
 }
-
-
