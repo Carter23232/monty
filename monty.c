@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	FILE *monty_file;
 	instruction_t spc[] = {{"push", push}, {"pall", pall}, {"pint", pint},
 	{"pop", pop}, {"swap", _swap}, {"add", _add}, {"nop", nop}, {"sub", _sub},
-	{"div", _div}, {"mul", _mul}, {"mod", _mod}};
+	{"div", _div}, {"mul", _mul}, {"mod", _mod}, {"pchar", pchar}};
 	size_t i = 0, spc_len = sizeof(spc) / sizeof(spc[0]);
 
 	initializer();

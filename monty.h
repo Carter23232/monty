@@ -68,6 +68,7 @@ void _div(stack_t **stack, unsigned int line_number);
 void _mul(stack_t **stack, unsigned int line_number);
 void _mod(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
 /**DEPENDENCIES*/
 /**list**/
 stack_t *add_dnodeint(stack_t **head, const int n);
