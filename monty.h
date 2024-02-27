@@ -63,6 +63,10 @@ void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void _swap(stack_t **stack, unsigned int line_number);
 void _add(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **stack, unsigned int line_number);
+void _div(stack_t **stack, unsigned int line_number);
+void _mul(stack_t **stack, unsigned int line_number);
+void _mod(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 /**DEPENDENCIES*/
 /**list**/
@@ -75,6 +79,10 @@ stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 void _swapp(stack_t **h);
 int add_(stack_t **h);
+int div_(stack_t **h);
+int mul_(stack_t **h);
+int mod_(stack_t **h);
+int sub_(stack_t **h);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
 void free_stack(stack_t *head);
 
