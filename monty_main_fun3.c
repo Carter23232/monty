@@ -124,3 +124,13 @@ void pstr(stack_t **stack, unsigned int line_number)
 		parser->success = 1;
 	printf("\n");
 }
+/**
+ * rotr - rotates, last becomes first and first becomes last
+ * @stack: the stack
+ * @line_number: line of command
+ */
+void rotr(stack_t **stack, unsigned int line_number)
+{
+	rotl(stack, line_number);
+}
+

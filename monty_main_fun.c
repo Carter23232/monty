@@ -20,7 +20,7 @@ void push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pall - prints stack
+ * pall - prints all element on the stack
  * @stack: the stack
  * @line_number: line of command
  */
@@ -31,7 +31,7 @@ void pall(stack_t **stack, unsigned int line_number)
 	parser->success = 1;
 }
 /**
- * pint - prints stack
+ * pint - prints top elem of stack
  * @stack: the stack
  * @line_number: line of command
  */

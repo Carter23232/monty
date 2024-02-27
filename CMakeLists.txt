@@ -11,10 +11,11 @@ add_executable(monty
         "monty_dep_list2.c"
         "monty_dep_list1.c"
         "monty_dep_std_fun2.c"
-        mounty_main_fun.c
+        monty_main_fun.c
         "monty_dep_std_fun3.c"
-        mounty_main_fun2.c
-        mounty_main_fun3.c
+        monty_main_fun2.c
+        monty_main_fun3.c
         monty_dep_list3.c
         monty_dep_std_fun1.c
+        monty_main_dun4.c
 )

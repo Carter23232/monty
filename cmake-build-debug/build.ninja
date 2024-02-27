@@ -77,8 +77,8 @@ build CMakeFiles/monty.dir/monty_dep_std_fun2.c.o: C_COMPILER__monty_unscanned_D
   OBJECT_DIR = CMakeFiles/monty.dir
   OBJECT_FILE_DIR = CMakeFiles/monty.dir
 
-build CMakeFiles/monty.dir/mounty_main_fun.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/mounty_main_fun.c || cmake_object_order_depends_target_monty
-  DEP_FILE = CMakeFiles/monty.dir/mounty_main_fun.c.o.d
+build CMakeFiles/monty.dir/monty_main_fun.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_main_fun.c || cmake_object_order_depends_target_monty
+  DEP_FILE = CMakeFiles/monty.dir/monty_main_fun.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -I/home/gadget/Desktop/ALX/monty/.
   OBJECT_DIR = CMakeFiles/monty.dir
@@ -91,15 +91,15 @@ build CMakeFiles/monty.dir/monty_dep_std_fun3.c.o: C_COMPILER__monty_unscanned_D
   OBJECT_DIR = CMakeFiles/monty.dir
   OBJECT_FILE_DIR = CMakeFiles/monty.dir
 
-build CMakeFiles/monty.dir/mounty_main_fun2.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/mounty_main_fun2.c || cmake_object_order_depends_target_monty
-  DEP_FILE = CMakeFiles/monty.dir/mounty_main_fun2.c.o.d
+build CMakeFiles/monty.dir/monty_main_fun2.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_main_fun2.c || cmake_object_order_depends_target_monty
+  DEP_FILE = CMakeFiles/monty.dir/monty_main_fun2.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -I/home/gadget/Desktop/ALX/monty/.
   OBJECT_DIR = CMakeFiles/monty.dir
   OBJECT_FILE_DIR = CMakeFiles/monty.dir
 
-build CMakeFiles/monty.dir/mounty_main_fun3.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/mounty_main_fun3.c || cmake_object_order_depends_target_monty
-  DEP_FILE = CMakeFiles/monty.dir/mounty_main_fun3.c.o.d
+build CMakeFiles/monty.dir/monty_main_fun3.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_main_fun3.c || cmake_object_order_depends_target_monty
+  DEP_FILE = CMakeFiles/monty.dir/monty_main_fun3.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -I/home/gadget/Desktop/ALX/monty/.
   OBJECT_DIR = CMakeFiles/monty.dir
@@ -119,6 +119,13 @@ build CMakeFiles/monty.dir/monty_dep_std_fun1.c.o: C_COMPILER__monty_unscanned_D
   OBJECT_DIR = CMakeFiles/monty.dir
   OBJECT_FILE_DIR = CMakeFiles/monty.dir
 
+build CMakeFiles/monty.dir/monty_main_dun4.c.o: C_COMPILER__monty_unscanned_Debug /home/gadget/Desktop/ALX/monty/monty_main_dun4.c || cmake_object_order_depends_target_monty
+  DEP_FILE = CMakeFiles/monty.dir/monty_main_dun4.c.o.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/home/gadget/Desktop/ALX/monty/.
+  OBJECT_DIR = CMakeFiles/monty.dir
+  OBJECT_FILE_DIR = CMakeFiles/monty.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target monty
@@ -127,7 +134,7 @@ build CMakeFiles/monty.dir/monty_dep_std_fun1.c.o: C_COMPILER__monty_unscanned_D
 #############################################
 # Link the executable monty
 
-build monty: C_EXECUTABLE_LINKER__monty_Debug CMakeFiles/monty.dir/monty.c.o CMakeFiles/monty.dir/monty_dep_list2.c.o CMakeFiles/monty.dir/monty_dep_list1.c.o CMakeFiles/monty.dir/monty_dep_std_fun2.c.o CMakeFiles/monty.dir/mounty_main_fun.c.o CMakeFiles/monty.dir/monty_dep_std_fun3.c.o CMakeFiles/monty.dir/mounty_main_fun2.c.o CMakeFiles/monty.dir/mounty_main_fun3.c.o CMakeFiles/monty.dir/monty_dep_list3.c.o CMakeFiles/monty.dir/monty_dep_std_fun1.c.o
+build monty: C_EXECUTABLE_LINKER__monty_Debug CMakeFiles/monty.dir/monty.c.o CMakeFiles/monty.dir/monty_dep_list2.c.o CMakeFiles/monty.dir/monty_dep_list1.c.o CMakeFiles/monty.dir/monty_dep_std_fun2.c.o CMakeFiles/monty.dir/monty_main_fun.c.o CMakeFiles/monty.dir/monty_dep_std_fun3.c.o CMakeFiles/monty.dir/monty_main_fun2.c.o CMakeFiles/monty.dir/monty_main_fun3.c.o CMakeFiles/monty.dir/monty_dep_list3.c.o CMakeFiles/monty.dir/monty_dep_std_fun1.c.o CMakeFiles/monty.dir/monty_main_dun4.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/monty.dir
   POST_BUILD = :
