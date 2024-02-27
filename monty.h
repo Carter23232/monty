@@ -78,11 +78,6 @@ stack_t *add_anypos(stack_t **head, unsigned int idx, const int n);
 stack_t *insert_dnodeint_at_index(stack_t **h, unsigned int idx, int n);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 void _swapp(stack_t **h);
-int add_(stack_t **h);
-int div_(stack_t **h);
-int mul_(stack_t **h);
-int mod_(stack_t **h);
-int sub_(stack_t **h);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
 void free_stack(stack_t *head);
 

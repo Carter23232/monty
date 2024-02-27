@@ -73,9 +73,16 @@ void _div(stack_t **stack, unsigned int line_number)
 {
 	int res, i = 0;
 
+	if ((*stack)->n < 0)
+	{
+		parser->success = 0;
+		fprintf(stderr, "L%d: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+
+	}
 	if (*stack && dlen(*stack) >= 2)
 	{
-		res = div_(stack);
+		res = (*stack)->next->n / (*stack)->n;
 		while (i < 2)
 		{
 			delete_dnodeint_at_index(stack, 0);
