@@ -81,13 +81,13 @@ int mod_(stack_t **h)
  */
 int sub_(stack_t **h)
 {
-	int result = 0, i = 0;
 	stack_t *cur = (*h);
+	int result = cur->n, i = 0;
 
-	while (i < 2)
+	while (i < 1)
 	{
-		result -= cur->n;
 		cur = cur->next;
+		result -= cur->n;
 		i++;
 	}
 	return (result);
