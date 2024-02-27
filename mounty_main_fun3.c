@@ -113,7 +113,10 @@ void pstr(stack_t **stack, unsigned int line_number)
 				parser->success = 1;
 			}
 			else
+			{
+				parser->success = 0;
 				break;
+			}
 			cur = cur->next;
 		}
 		printf("\n");
