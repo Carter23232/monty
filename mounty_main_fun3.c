@@ -101,6 +101,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 void pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *cur = *stack;
+	(void)line_number;
 
 	if (cur)
 	{
@@ -112,11 +113,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 				parser->success = 1;
 			}
 			else
-			{
-				fprintf(stderr, "L%d: can't pchar, value out of range\n",
-					line_number);
-				exit(EXIT_FAILURE);
-			}
+				break;
 			cur = cur->next;
 		}
 		printf("\n");
