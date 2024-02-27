@@ -92,3 +92,40 @@ void pchar(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 }
+
+/**
+ * pstr - prints the char of all values on stack
+ * @stack: the stack
+ * @line_number: line of command
+ */
+void pstr(stack_t **stack, unsigned int line_number)
+{
+	stack_t *cur = *stack;
+
+	if (cur)
+	{
+		while (cur)
+		{
+			if ((cur)->n >= 65 && (cur)->n <= 122)
+			{
+				printf("%c", (char)(cur)->n);
+				parser->success = 1;
+			}
+			else
+			{
+				fprintf(stderr, "L%d: can't pchar, value out of range\n",
+					line_number);
+				exit(EXIT_FAILURE);
+			}
+			cur = cur->next;
+		}
+		printf("\n");
+	}
+	else
+	{
+		parser->success = 0;
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+}
