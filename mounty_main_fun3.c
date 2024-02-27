@@ -118,6 +118,6 @@ void pstr(stack_t **stack, unsigned int line_number)
 		}
 	}
 	else
-		parser->success = 0;
+		parser->success = 1;
 	printf("\n");
 }
