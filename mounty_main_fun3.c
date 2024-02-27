@@ -106,7 +106,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 	{
 		while (cur)
 		{
-			if ((cur)->n >= 65 && (cur)->n <= 122)
+			if ((cur)->n > 0 && (cur)->n <= 127)
 			{
 				printf("%c", (char)(cur)->n);
 				parser->success = 1;
