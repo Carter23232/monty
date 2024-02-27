@@ -74,12 +74,4 @@ int mod_(stack_t **h)
 	return (result);
 
 }
-/**
- * sub_ - subtract first 2 element
- * @h: head of list
- * Return: 0 if none or 1
- */
-int sub_(stack_t **h)
-{
-	return ((*h)->next->n - (*h)->n);
-}
+

@@ -10,7 +10,7 @@ void _add(stack_t **stack, unsigned int line_number)
 
 	if (*stack && dlen(*stack) >= 2)
 	{
-		res = add_(stack);
+		res = (*stack)->next->n + (*stack)->n;
 		while (i < 2)
 		{
 			delete_dnodeint_at_index(stack, 0);
@@ -48,7 +48,7 @@ void _sub(stack_t **stack, unsigned int line_number)
 
 	if (*stack && dlen(*stack) >= 2)
 	{
-		res = sub_(stack);
+		res = (*stack)->next->n - (*stack)->n;
 		while (i < 2)
 		{
 			delete_dnodeint_at_index(stack, 0);
