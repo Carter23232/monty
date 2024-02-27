@@ -80,7 +80,7 @@ void _div(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 
 	}
-	if (dlen(*stack) >= 2)
+	if (*stack && dlen(*stack) >= 2)
 	{
 		res = (*stack)->next->n / (*stack)->n;
 		while (i < 2)
