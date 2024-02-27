@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	FILE *monty_file;
 	instruction_t spc[] = {{"push", push}, {"pall", pall}, {"pint", pint},
 	{"pop", pop}, {"swap", _swap}, {"add", _add}, {"nop", nop}, {"sub", _sub},
-	{"div", _div}, {"mul", _mul}, {"mod", _mod}, {"#", nop}};
+	{"div", _div}, {"mul", _mul}, {"mod", _mod}};
 	size_t i = 0, spc_len = sizeof(spc) / sizeof(spc[0]);
 
 	initializer();
@@ -36,6 +36,8 @@ int main(int argc, char **argv)
 			token(&cmd->tokened, cmd->cont_per_line, ' ');
 			while (i < spc_len && parser->success == 0)
 			{
+				if (is_comment(cmd->tokened[0]))
+					break;
 				if (_strcmp(spc[i].opcode, cmd->tokened[0]) == 0)
 				{
 					parser->str = &cmd->tokened[1];
