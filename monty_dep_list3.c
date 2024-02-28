@@ -10,3 +10,15 @@ int is_comment(const char *str)
 		return (1);
 	return (0);
 }
+
+/**
+ * _swp3- swaps first 2 element
+ * @h: head of list
+ * Return: 0 if none or 1
+ */
+void _swp3(stack_t **h)
+{
+	int temp = (*h)->n;
+	(*h)->n = (*h)->next->next->n;
+	(*h)->next->next->n = temp;
+}

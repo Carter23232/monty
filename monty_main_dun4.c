@@ -19,6 +19,15 @@ void rotl(stack_t **stack, unsigned int line_number)
 			parser->success = 1;
 			return;
 		}
+		if (len < 4)
+		{
+			if (len == 2)
+				_swap(stack, line_number);
+			else
+				_swp3(stack);
+			parser->success = 1;
+			return;
+		}
 		arr = (int *)malloc(sizeof(int) * (len + 1));
 		if (!arr)
 			return;
