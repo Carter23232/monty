@@ -108,13 +108,6 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 			free(temp);
 			break;
 		}
-		else if (index == len - 1)
-		{
-			cur->prev->next = NULL;
-			free(cur);
-			break;
-
-		}
 		cur = cur->next;
 		counter++;
 	}

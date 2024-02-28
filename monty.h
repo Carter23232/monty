@@ -85,6 +85,7 @@ void _swapp(stack_t **h);
 stack_t *add_dnodeint_end(stack_t **head, const int n);
 void free_stack(stack_t *head);
 int is_comment(const char *str);
+void _swap_l2(stack_t **h);
 
 
 /**std_util**/
